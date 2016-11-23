@@ -10,7 +10,7 @@ function [out] = trainClassifierRNA(x, y)
     trainFcn = 'trainscg';  % Scaled conjugate gradient backpropagation.
 
     % Create a Pattern Recognition Network
-    hiddenLayerSize = 10;
+    hiddenLayerSize = 85;
     net = patternnet(hiddenLayerSize, trainFcn);
 
     % Setup Division of Data for Training, Validation, Testing
@@ -39,4 +39,9 @@ function [out] = trainClassifierRNA(x, y)
     %figure, ploterrhist(e)
     %figure, plotconfusion(t,y)
     figure, plotroc(t,y)
+    
+    [c,cm] = confusion(t,y);
+
+    fprintf('Percentage Correct Classification   : %f%%\n', 100*(1-c));
+
 end
