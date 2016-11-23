@@ -170,4 +170,4 @@ for fold = 1:KFolds
 end
 
 correctPredictions = (validationPredictions == response);
-validationAccuracy = sum(correctPredictions)/length(correctPredictions);
+validationAccuracy = sum(correctPredictions)/length(correctPredictions)

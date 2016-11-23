@@ -30,7 +30,7 @@ if option == 2
         trainClassifierKNN(data);
     end
     if option2 == 2
-        trainClassifierKNN(data_sel);
+        trainClassifierKNNsel19features(data_sel);
     end
     if option2 == 3
         trainClassifierKNNwithPCA(data);
@@ -72,7 +72,7 @@ if option == 5
         trainClassifierSVM(data);
     end
     if option2 == 2
-        trainClassifierSVM(data_sel);
+        trainClassifierSVMsel19features(data_sel);
     end
     if option2 == 3
         trainClassifierSVMwithPCA(data);        
