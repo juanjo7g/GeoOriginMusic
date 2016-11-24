@@ -24,7 +24,7 @@ NumClases=length(unique(Y)); %%% Se determina el n?mero de clases del problema.
 
         %%% Entrenamiento de los modelos. Recuerde que es un modelo por cada clase. %%%
 
-        NumArboles=100;
+        NumArboles=500;
         Modelo=TreeBagger(NumArboles,Xtrain,Ytrain,'oobpred','on');
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

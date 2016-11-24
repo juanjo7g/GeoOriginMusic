@@ -19,12 +19,12 @@ data = [tracks countries];
 data_ext = [tracks_31_features_ext countries];
 data_sel = [tracks_19_features_sel countries];
 
-optionStr = 'Opciones: \n2. K Vecinos mas Cercanos.\n3. Redes Neuronales Artificiales\n4. Random Forest.\n5. Maquinas de Soporte Vectorial.\n6. Seleccionar caracteristicas con indices de Fisher.\n7. Seleccionar caracteristicas con SFS\n\nIngrese la opcion deseada: ';
+optionStr = 'Opciones: \n1. K Vecinos mas Cercanos.\n2. Redes Neuronales Artificiales\n3. Random Forest.\n4. Maquinas de Soporte Vectorial.\n5. Seleccionar caracteristicas con indices de Fisher.\n6. Seleccionar caracteristicas con SFS\n\nIngrese la opcion deseada: ';
 option2Str = '\n\n1. Con todas las caracteristica.\n2. Con seleccion de caracteristicas (SFS)\n3. Con extraccion de caracteristicas (PCA).\n\nIngrese la opcion deseada: '; 
 option = input(optionStr);
 
 % K Vecinos mas cercanos %
-if option == 2
+if option == 1
     option2 = input(option2Str);
     if option2 == 1
         trainClassifierKNN(data);
@@ -38,7 +38,7 @@ if option == 2
 end
 
 % Redes Neuronales Artificiales %
-if option == 3
+if option == 2
     option2 = input(option2Str);
     if option2 == 1
         trainClassifierRNA(tracks, mask);
@@ -52,7 +52,7 @@ if option == 3
 end
 
 % Random Forest %
-if option == 4
+if option == 3
     option2 = input(option2Str);
     if option2 == 1
         trainClassifierRF(tracks, countries);
@@ -66,7 +66,7 @@ if option == 4
 end
 
 % Maquinas de Soporte Vectorial %
-if option == 5
+if option == 4
     option2 = input(option2Str);
     if option2 == 1
         trainClassifierSVM(data);
@@ -80,11 +80,11 @@ if option == 5
 end
 
 % Seleccion Fisher %
-if option == 6
+if option == 5
     featuresSelectionFisher(tracks, countries);
 end
 
 % Seleccion Busqueda secuencial %
-if option == 7
+if option == 6
     featuresSelectionSFS(tracks, countries);
 end
